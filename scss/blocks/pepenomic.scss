@@ -4,6 +4,7 @@
   padding-left: 316px;
   background-image: url("../public/img/pepenomic/pepenomic_bg.jpg");
   background-size: cover;
+  position: relative;
 }
 
 .pepenomic__title {
@@ -25,6 +26,8 @@
   height: 80px;
   display: flex;
   align-items: center;
+  border: 2.85px solid #000;
+  border-radius: 57px;
   background-color: #fff;
   font-family: var(--second-family);
   font-weight: 800;
@@ -32,6 +35,30 @@
 
   span {
     &:first-of-type {
+      width: 136px;
+      height: 106%;
+      padding-left: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2.85px solid #000;
+      border-radius: 57px;
+      position: relative;
+      left: -2px;
+      font-family: var(--second-family);
+      font-weight: 800;
+      font-size: 46px;
+
+      &::before {
+        content: url("../public/img/pepenomic/pepenomic_mark.png");
+        position: absolute;
+        left: 9px;
+        top: 4px;
+      }
+    }
+
+    &:last-of-type {
+      margin-left: 28px;
     }
   }
 }
@@ -44,4 +71,21 @@
 }
 .statisctics__team {
   color: #000;
+}
+
+.pepenomic__img {
+  position: absolute;
+  bottom: 107px;
+  right: 0;
+}
+
+.pepenomic__decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 107px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #ffeeba 0%, #ffe29c 100%);
 }
