@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@font-face {
+  font-family: "Pistol Grip Pimp";
+  src: url("../public/fonts/PistolGripPump.ttf");
+}
+@font-face {
+  font-family: "Mexicana";
+  src: url("../public/fonts/Mexicana.ttf");
+}
+
+:root {
+  --font-family: "Pistol Grip Pimp", sans-serif;
+  --second-family: "Manrope", sans-serif;
+  --third-family: "Mexicana", sans-serif;
+  --red: #d23d3d;
+  --green: #0f7054;
+  --black: #252525;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #fff;
+  color: #fff;
+}
+
+.scroll-off {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.tooltip {
+  padding: 12px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 24px;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  translate: -50% 0;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  z-index: 21;
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
