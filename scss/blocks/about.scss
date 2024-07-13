@@ -7,15 +7,32 @@
   align-items: center;
   overflow: hidden;
 
+  @media screen and (max-width: 767px) {
+    min-height: 100%;
+    padding-top: 40px;
+    flex-direction: column;
+  }
+
   .about__container {
     width: min(1290px, 100%);
     min-height: 673px;
     padding-left: 80px;
+    padding-right: 80px;
     background-image: url("../public/img/about/about_bg.png");
     background-size: cover;
     border-radius: 20px;
     position: relative;
     bottom: 80px;
+
+    @media screen and (max-width: 1199px) {
+      background-position: center;
+    }
+    @media screen and (max-width: 767px) {
+      min-height: 100%;
+      padding: 40px;
+      bottom: 0;
+      border-radius: 0px;
+    }
 
     &::after {
       content: "";
@@ -35,6 +52,14 @@
       font-size: 96px;
       position: relative;
       z-index: 1;
+
+      @media screen and (max-width: 1199px) {
+        font-size: 76px;
+        text-align: center;
+      }
+      @media screen and (max-width: 767px) {
+        margin-top: 0;
+      }
     }
 
     .about__description {
@@ -49,6 +74,7 @@
 
     .about__wrap {
       display: flex;
+      align-items: center;
       gap: 40px;
       position: relative;
       z-index: 1;
@@ -89,6 +115,12 @@
       &:active {
         background-color: #fff;
       }
+
+      @media screen and (max-width: 767px) {
+        width: 120px;
+        height: 36px;
+        font-size: 16px;
+      }
     }
   }
 }
@@ -97,16 +129,28 @@
   position: absolute;
   top: -14px;
   left: 0;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 .about__decoration2 {
   position: absolute;
   top: -14px;
   right: 75px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 .about__decoration3 {
   position: absolute;
   top: 213px;
   right: 0px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .about__ticker {
@@ -117,6 +161,11 @@
   bottom: 0;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 40px;
+    position: relative;
+  }
 
   .ticker__wrap {
     display: flex;

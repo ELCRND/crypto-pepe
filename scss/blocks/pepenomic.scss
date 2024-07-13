@@ -5,12 +5,33 @@
   background-image: url("../public/img/pepenomic/pepenomic_bg.jpg");
   background-size: cover;
   position: relative;
+
+  @media screen and (max-width: 1199px) {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (max-width: 767px) {
+    min-height: 800px;
+    padding-top: 40px;
+  }
 }
 
 .pepenomic__title {
   margin-bottom: 56px;
   font-size: 136px;
   text-shadow: 5px 7px 0 rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 2;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 96px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+    font-size: 76px;
+  }
 }
 
 .pepenomic__statisctics {
@@ -18,12 +39,15 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  position: relative;
+  z-index: 2;
 }
 
 .statisctics__lequidity,
 .statisctics__marketing,
 .statisctics__team {
   height: 80px;
+  padding-right: 20px;
   display: flex;
   align-items: center;
   border: 2.85px solid #000;
@@ -32,6 +56,11 @@
   font-family: var(--second-family);
   font-weight: 800;
   font-size: 35px;
+
+  @media screen and (max-width: 767px) {
+    height: 60px;
+    font-size: 24px;
+  }
 
   span {
     &:first-of-type {
@@ -49,6 +78,11 @@
       font-weight: 800;
       font-size: 46px;
 
+      @media screen and (max-width: 767px) {
+        width: 100px;
+        font-size: 32px;
+      }
+
       &::before {
         content: url("../public/img/pepenomic/pepenomic_mark.png");
         position: absolute;
@@ -59,6 +93,10 @@
 
     &:last-of-type {
       margin-left: 28px;
+
+      @media screen and (max-width: 767px) {
+        margin-left: 0;
+      }
     }
   }
 }
@@ -88,4 +126,10 @@
   display: flex;
   align-items: center;
   background: linear-gradient(180deg, #ffeeba 0%, #ffe29c 100%);
+
+  img {
+    @media screen and (max-width: 767px) {
+      height: 20px;
+    }
+  }
 }
